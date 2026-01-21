@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="category-page">
+
+
+        <h1>Rank 2</h1>
+        <div class="character-detail">
+            <div class="char-image">
+<img src="../../images/rank1.png" alt="Rank 2" style="height: 600px;">
+            </div>
+            <div class="char-lore">
+                <p>
+                    Rank 2 is the most common class of insolent creatures. Most are born in the Insolent Realm, while others are summoned by more powerful beings or emerge when living creatures sin and become corrupted, transforming into Rank 2 themselves.
+
+A Rank 2 can evolve if it proves itself worthy by killing or corrupting other living beings. Successful evolution transforms it into a Rank 3 soldier, while failure results in a winged variant of the Rank 2 soldier.
+                </p>
+            </div>
+        </div>
+
+        <button id="statsBtn" class="statsbutton">Show Stats</button>
+
+<!-- Stats Popup -->
+<div id="statsPopup" class="stats-popup">
+    <h2>Rank 2 Stats</h2>
+    <ul>
+        <li>Health: 100</li>
+        <li>Defense: 0</li>
+        <li>Attack: 10</li>
+        <li>Speed: normal (able to run)</li>
+        <li>Rarity: Extremely common</li>
+        <li>Attacks: Punch, Leap attacks (small distance)</li>
+        <li>Summonable, Barracks, Born, Corrupted</li>
+    </ul>
+</div>
+
+        <button onclick="window.history.back()">← Back</button>
+    </div>
+    <script>
+const statsBtn = document.getElementById('statsBtn');
+const statsPopup = document.getElementById('statsPopup');
+
+statsBtn.addEventListener('click', () => {
+    if(statsPopup.style.display === "block") {
+        statsPopup.style.display = "none";
+        statsBtn.textContent = "Show Stats";
+    } else {
+        statsPopup.style.display = "block";
+        statsBtn.textContent = "Hide Stats";
+    }
+});
+</script>
+
+</body>
+
+</html>
